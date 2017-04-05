@@ -6,7 +6,7 @@ author:     "wblearn"
 header-img: "img/post-zj-2016.jpg"
 tags:
     - 2016总结
-    - 
+    - 闲谈
     - 
 ---
 

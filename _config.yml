@@ -70,7 +70,7 @@ ga_domain: wblearn.github.io
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "不要让任何事情成为你不去学习的<br>理由,在学习中成长！"
+sidebar-about-description: "不要让任何事情成为你不去学习的理由"
 sidebar-avatar: /img/avatar-wb.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

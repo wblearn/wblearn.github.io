@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "我的独立博客<br><small>第一篇</small>"
+title:      "我的独立博客(第一篇)"
 date:       2016-12-23 00:00:00
 author:     "wblearn"
 header-img: "img/post-bg-2015.jpg"

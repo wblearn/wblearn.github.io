@@ -16,7 +16,7 @@ weibo_username:     wudalanggd
 zhihu_username:     wblearn
 github_username:    wblearn
 #twitter_username:  wblearn
-jianshu_username:  wblearn
+jianshu_username:  48599dc7ef1b
 # linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -56,7 +56,9 @@ duoshuo_username: wblearnblog
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
-
+# LiveRe setttings
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: MTAyMC8yODkzOC81NTA3
 
 # Analytics settings
 # Baidu Analytics 

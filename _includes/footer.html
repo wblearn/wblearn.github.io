@@ -58,6 +58,18 @@
                         </a>
                     </li>
                     {% endif %}
+					
+					{% if site.jianshu_username %}
+                    <li>
+                        <a target="_blank" href="http://www.jianshu.com/u/{{ site.jianshu_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+					
                     {% if site.github_username %}
                     <li>
                         <a target="_blank" href="https://github.com/{{ site.github_username }}">
@@ -86,7 +98,7 @@
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=wblearnpro&repo=wblearnpro.github.io&type=star&count=true" >
+                        src="https://ghbtns.com/github-btn.html?user=wblearn&repo=wblearn.github.io&type=star&count=true" >
                     </iframe>
                 </p>
             </div>

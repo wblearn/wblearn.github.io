@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/img/post-bg-universe.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="tag-heading">
+                    <h2>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<article itemscope itemtype='http://schema.org/VideoObject'>
+  <header>
+	  <h2 itemprop='name'>{{ page.title }}</h2>
+	  <time itemprop='uploadDate' content='{{ page.date }}'>
+	    {{ page.date | date: '%d %B %Y'}}
+	  </time>
+	</header>
+	<section class='video-wrapper'>
+		<iframe src='http://www.youtube.com/embed/{{ page.youtube_id }}'
+		        itemprop='embedUrl'
+		        frameborder='0'
+		        allowfullscreen >
+		</iframe>
+	</section>
+	<section class='description' itemprop='description'>
+  	{{ content }}
+  </section>
+</article>
+</main>

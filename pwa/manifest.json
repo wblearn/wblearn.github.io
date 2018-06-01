@@ -1,9 +1,9 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
+  "name": "Wblearn Blog",
+  "short_name": "Wblearn Blog",
   "description": "About an engineer & designer who loves web.",
   "icons": [{
-    "src": "icons/128.png",
+    "src": "icons/61.png",
     "sizes": "128x128",
     "type": "image/png"
   }, {

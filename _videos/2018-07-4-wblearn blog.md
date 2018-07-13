@@ -12,4 +12,4 @@ tags: [wblearn, 博客, blog]
 * [Wblearn Blog](https://www.bilibili.com/video/av26157244)
 
 **PS:	之前此video页面是我自己为我的博客定制的一个videos页面(视频集成于youtube，国内的需翻墙才能看)，主要是youtube没广告，
-后来实在受不了每次上传视频到youtube时我那SVN的龟速，于是选择了国内二次元视频网站bilibili：)**
+后来实在受不了每次上传视频到youtube时我那VPN的龟速，于是选择了国内二次元视频网站bilibili：)**

@@ -24,11 +24,13 @@ layout: default
 	  </time>
 	</header>
 	<section class='video-wrapper'>
-		<iframe src='http://www.youtube.com/embed/{{ page.youtube_id }}'
+	 <div class="embed-responsive embed-responsive-16by9">
+		<iframe src='http://player.bilibili.com/player.html?aid={{ page.youtube_id }}'
 		        itemprop='embedUrl'
 		        frameborder='0'
 		        allowfullscreen >
 		</iframe>
+	 </div>	
 	</section>
 	<section class='description' itemprop='description'>
   	{{ content }}

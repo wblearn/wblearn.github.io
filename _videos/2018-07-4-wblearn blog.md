@@ -1,7 +1,7 @@
 ---
 title: Wblearn的博客 | Wblearn Blog
 youtube_id: 26157244
-cover_id: img/videos_cover/013b97b5259722abe2e34e6e129289a2476a0eae.jpg
+cover_id: img/videos_cover/106.jpg
 date: 2018-07-4
 tags: [wblearn, 博客, blog]
 ---

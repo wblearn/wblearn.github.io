@@ -1,5 +1,5 @@
 ---
-title: Wblearn的博客 | Wblearn Blog
+title: Wblearn Blog
 youtube_id: 26157244
 cover_id: img/videos_cover/106.jpg
 date: 2018-07-4

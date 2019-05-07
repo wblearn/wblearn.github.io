@@ -111,12 +111,6 @@ defaults:
 # Friends
 friends: [
     {
-        title: "wblearn的简书",
-        href: "http://www.jianshu.com/users/48599dc7ef1b/latest_articles"
-    },{
-        title: "wblearn的CSDN",
-        href: "http://blog.csdn.net/wudalang_gd"
-    },{
         title: "wblearn的微博",
         href: "http://weibo.com/wudalanggd"
     },{

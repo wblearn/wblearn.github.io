@@ -3,7 +3,7 @@ title: AI Tech Blog
 SEOTitle: MyungJae Shin | MyungJae Shin AI Tech Blog
 header-img: img/home-bg-art.jpg
 email: myungjae.shin@mofl.ai
-description: "@wblearn, AI Engineer, MOFL Inc."
+description: "AI Engineer, MOFL Inc."
 keyword: "AI, ML, Vision, Kubeflow, RL, Time Series"
 url: "http://170928.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'

@@ -31,10 +31,10 @@ tags:
 
 <p> ML의 pipeline은 다음과 같이 크게 정의할 수 있습니다. 
 
-+ load data : 사용하고자 하는 데이터를 db 와 같은 곳에서 가져옵니다. 
-+ data analysis & feature engineering : 데이터를 분석하고 ML 모델에 적용하기에 적합하도록 feature를 조절합니다. (개인적으로 이 단계가 제일 중요하다고 생각합니다)
-+ model implementation & validation : 위에서 전처리된 데이터를 다루기 위한 ML 모델을 구현하고 학습을 수행하며, 모델에 대한 검증을 진행합니다.
-+ model serving : 학습된 모델을 사용해서 service 를 제공할 수 있도록 구성합니다. 
+1. load data : 사용하고자 하는 데이터를 db 와 같은 곳에서 가져옵니다. 
+2. data analysis & feature engineering : 데이터를 분석하고 ML 모델에 적용하기에 적합하도록 feature를 조절합니다. (개인적으로 이 단계가 제일 중요하다고 생각합니다)
+3.  model implementation & validation : 위에서 전처리된 데이터를 다루기 위한 ML 모델을 구현하고 학습을 수행하며, 모델에 대한 검증을 진행합니다.
+4.  model serving : 학습된 모델을 사용해서 service 를 제공할 수 있도록 구성합니다. 
 
 
 

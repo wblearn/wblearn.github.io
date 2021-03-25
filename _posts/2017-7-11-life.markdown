@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      "生活的智慧"
-date:       2017-7-11 00:00:00
-author:     "wblearn"
-header-img: "img/post-bg-alitrip.jpg"
+title:      "Kubeflow 튜토리얼"
+date:       2021-3-25 00:00:00
+author:     "MJ Shin"
 tags:
-    - 程序员
-    - 闲谈
-    - 
+    - Kubeflow
+    - Kubernetes
+    - ML
+    - MLOps
 ---
 
 >本篇来源于垠神的[生活的智慧](http://www.yinwang.org/blog-cn/2017/07/08/living-philosophy)，觉得对生活有启迪转载于此

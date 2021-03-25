@@ -18,7 +18,7 @@ tags:
 
 <p> 우선, Kubeflow를 사용하는 것의 장점에 대해서 살펴보겠습니다. 
 
-<img src="/blog/170928.github.io/_images/ml_operation_overview.png">
+<img src="/_images/ml_operation_overview.png">
 
 <p> 위의 이미지는 machine learning을 사용하여 service를 하고자 할 때 실제로 필요로 되어지는 사항들을 표기한 것입니다. 생각보다 Machine learning code가 갖는 비중은 엄청 작고 다른 부가적인 요소들이 대부분의 비중을 차지하고 있는 것을 알 수 있습니다. 
 

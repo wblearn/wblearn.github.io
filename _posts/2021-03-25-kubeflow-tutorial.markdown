@@ -46,7 +46,7 @@ tags:
 
 
 
-#### Reference 
->1. 가장 큰 도움을 받은 블로그 입니다! http://ghcksdk.com/kubeflow-installation/ 
->2. https://lsjsj92.tistory.com/579 
->3. https://www.youtube.com/watch?v=sRQECN7LsbI
+### Reference 
+1. 가장 큰 도움을 받은 블로그 입니다! http://ghcksdk.com/kubeflow-installation/ 
+2.  https://lsjsj92.tistory.com/579 
+3.   https://www.youtube.com/watch?v=sRQECN7LsbI

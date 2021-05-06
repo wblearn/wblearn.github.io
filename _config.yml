@@ -9,11 +9,18 @@ url: "http://170928.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
+# Math equation # modified by MJ Shin 2021-05-06
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
 
 # SNS settings
 RSS: false
-github_username:    mf-myungjae-shin
-
+weibo_username:  MyungJae Shin
+github_username:   mf-myungjae-shin
 
 
 # Build settings
@@ -25,11 +32,9 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","READM
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
-
 
 
 # Markdown settings
@@ -41,14 +46,17 @@ kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
 
-
-# Disqus settings
-#disqus_username: _your_disqus_short_name_
+# LiveRe setttings
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: MTAyMC8yODkzOC81NTA3
 
 # Analytics settings
 # Baidu Analytics 
 # ba_track_id: [your track id]
 
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: wblearn.github.io
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.

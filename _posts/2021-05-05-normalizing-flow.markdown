@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Normalizing Flow - RealNVP 이론 과 구현까지 "
+title:      "Normalizing Flow - RealNVP 이론 과 구현까지 (1)"
 date:       2021-5-06 00:00:00
 author:     "MJ Shin"
 tags:
@@ -75,7 +75,7 @@ x를 우리가 관찰할 수 있는 데이터라고 가정을 하도록 하겠�
 > 2. https://arxiv.org/pdf/2102.06539.pdf
 
 <p> 
-이제 본격적으로 realNVP 논문의 내용을 살펴보도록 하겠습니다. realNVP 논문에서는 위의 1-1 invertible mapping function을 neural network로 구성하였으며, affine coupling layer 라고 정의하고 있습니다. 
+다음 포스팅에서는 realNVP의 실질적인 구현과 해당 논문에 대해서 자세히 다뤄보겠습니다. 
 </p>
 
 ### Reference 

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 Disallow: /private/
-Sitemap: http://170928.github.io/sitemap.xml
+Sitemap: https://170928.github.io/sitemap.xml

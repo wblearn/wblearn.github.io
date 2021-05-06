@@ -66,17 +66,18 @@ x를 우리가 관찰할 수 있는 데이터라고 가정을 하도록 하겠�
 > 위 수식을 실제로 전개해보고 싶으시면 inverse function theorem 을 찾아보셔서 $$\frac{d^(-1)}{dy} = (\frac{df(x)}{dx})^(-1)$$ 에 대한 증명만 살펴보시면 쉽게 이해하실 수 있을 것이라고 생각합니다.  
 
 <p>
-공부를 하던 와중에 그러면 위의 식에서 제약조건이 되는 Jacobian term의 존재 유무는 어떤 영향을 미칠까에 대하여 생각을 해보게 되었습니다. 그리고 친절하게도 많은 분들이 이미 다 적어두셨더라구요. 그리고 이에 대한 논문까지 나왔네요. 간단히 말씀드리면 normalizing flow의 loss function이 아래와 같다는 것부터 생각하시면 될 것 같습니다. $$\log P_(theta)(x)$$
+공부를 하던 와중에 그러면 위의 식에서 제약조건이 되는 Jacobian term의 존재 유무는 어떤 영향을 미칠까에 대하여 생각을 해보게 되었습니다. 그리고 친절하게도 많은 분들이 이미 다 적어두셨더라구요. 그리고 이에 대한 논문까지 나왔네요. 간단히 말씀드리면 normalizing flow의 loss function이 아래와 같다는 것부터 생각하시면 될 것 같습니다. $$\log P_{\theta}(x)$$
 
 이때 만약 determinant term이 없다면 optimization 과정에서 p(f(x))를 최대화하는 theta 를 찾는 방향으로 학습되며 determinant 가 고려안되어 0으로 다가가기 때문에 z = f(x) 의 역변환 과정이 어려워 지게 된다고 합니다. 
 </p>
-> https://sanghyu.tistory.com/18
-> https://arxiv.org/pdf/2102.06539.pdf
+> 1. https://sanghyu.tistory.com/18
+
+> 2. https://arxiv.org/pdf/2102.06539.pdf
 
 <p> 
 이제 본격적으로 realNVP 논문의 내용을 살펴보도록 하겠습니다. realNVP 논문에서는 위의 1-1 invertible mapping function을 neural network로 구성하였으며, affine coupling layer 라고 정의하고 있습니다. 
 </p>
 
-<h2> Reference 
+### Reference 
 >1. https://www.youtube.com/watch?v=hwpNjszbHBM (Postech AMI lab 동영상입니다. 이런 연구실에서 박사를 하면 엄청 즐겁게 배울게 많겠네요 ㅎㅎ )
 >2. http://bigdata.dongguk.ac.kr/lectures/med_stat/_book/%ED%99%95%EB%A5%A0%EB%B3%80%EC%88%98%EB%B6%84%ED%8F%AC.html (오래전에 공부해서 잊었던 통계학적인 설명에 대해서는 이 reference에서 많이 공부했습니다.)

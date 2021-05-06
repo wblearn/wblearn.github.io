@@ -7,34 +7,20 @@ header-img: "img/post-bg-alitrip.jpg"
 
 <!-- Language Selector -->
 <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
+    <option value="0" selected> English </option>
+    <!-- <option value="1"> English </option> -->
 </select>
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-
-
-  <p> Hi，我是张文炳，90后程序猿一枚，昵称<Strong>wblearn</Strong>。<br></p>
-  目前投身于IT行业，同时在其他方面打打辅助!<br>   
-  <p>希望通过这个博客能结识更多志同道合的人，学习分享的路上与君共勉!<br> </p>  
-  <Strong>可通过以下方式联系到我:</Strong><br>
-   <Strong>QQ邮箱:1275660493@qq.com</Strong><br>
-   <Strong>微博:<a href='https://weibo.com/wudalanggd' target='_blank'>https://weibo.com/wudalanggd</a></Strong>
-   
-</div>
 
 <!-- English Version -->
 <div class="en post-container">
     <!--<blockquote><p>
     Don't let anything become a reason for not studying</p></blockquote>-->
 
-    <p> Hi, I am Wenbing Zhang，a software engineer，Nickname <Strong>wblearn</Strong>。<br></p>
-  My major career is Java Software Development Engineer at present!<br>   
+    <p> MyungJae Shin, AI Research Engineer at MOFL Inc.<Strong>wblearn</Strong>。
+    <br></p>I'm interested in Machine Learning and MLOps.<br>   
   <p>I hope that through this blog, we can get to know more like-minded people and learn to share with them on the road of sharing!<br> </p>  
   <Strong>you can contact me in the following ways:</Strong><br>
-   <Strong>QQ Email:1275660493@qq.com</Strong><br>
-   <Strong>Weibo:<a href='https://weibo.com/wudalanggd' target='_blank'>https://weibo.com/wudalanggd</a></Strong>
+   <Strong>myungjae.shin@mofl.ai</Strong><br>
    
 </div>
 
@@ -80,7 +66,6 @@ header-img: "img/post-bg-alitrip.jpg"
 
 {% if site.duoshuo_username %}
 
-			                <!-- 多说评论框 start -->
 			                <div class="comment">
 			                    <div class="ds-thread"
 									data-thread-key="{{site.duoshuo_username}}/about"
@@ -88,7 +73,6 @@ header-img: "img/post-bg-alitrip.jpg"
 			                        data-url="{{site.url}}{{site.baseurl}}{{page.url}}" >
 			                    </div>
 			                </div>
-			                <!-- 多说评论框 end -->
 		
 					{% endif %}
 				

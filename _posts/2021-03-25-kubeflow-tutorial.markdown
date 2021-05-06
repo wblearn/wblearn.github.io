@@ -8,6 +8,9 @@ tags:
     - Kubernetes
     - ML
     - MLOps
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ## Kubeflow 개념 
 

@@ -9,6 +9,9 @@ tags:
     - ML
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ## Normalizing Flow 개념 
 

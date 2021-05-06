@@ -53,10 +53,13 @@ kramdown:
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 ga_domain: wblearn.github.io
 
-
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
+<<<<<<< HEAD
 sidebar-about-description: "MyungJae Shin AI Blog"
+=======
+sidebar-about-description: "MyungJae Shin (AI Engineer)"
+>>>>>>> a51a38e7b1185e4af2c8c62ee4e2fc1eb1a56da7
 sidebar-avatar: /img/avatar-wb.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -92,19 +95,12 @@ defaults:
     values:
       layout: video
 
-# Friends
-friends: [
-    {
-        title: "wblearn的微博",
-        href: "http://weibo.com/wudalanggd"
-    },{
-        title: "study video",
-        href: "https://wblearn.github.io/study-video"
-    }
-]
 
 # 댓글 기능 
 disqus_shortname: '170928-github-io'
+<<<<<<< HEAD
 
 # 구글검색가능
 url : https://170928.github.io/
+=======
+>>>>>>> a51a38e7b1185e4af2c8c62ee4e2fc1eb1a56da7

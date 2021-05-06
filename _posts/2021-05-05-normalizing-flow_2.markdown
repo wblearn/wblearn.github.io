@@ -43,7 +43,7 @@ $$exp[\sum_{j} s(x_{1:d})_j]$$
 친절하게도 이 논문에서는 위 수식 (7) 번의 실제 구현시에 방법을 설명해주고 있습니다. input dimension의 1:d 와 d+1:D 를 masking 방법을 통해서 구현하였다는 것을 알려줍니다. 
 
 
-<img src="https://github.com/170928/170928.github.io/blob/master/_images/normalizing_flow/figure12.PNG?raw=true">
+<img src="https://github.com/170928/170928.github.io/blob/master/_images/normalizing_flow/figure12.png?raw=true">
 
 최종적으로 realNVP를 사용한 모델 학습의 경우 위의 목적식을 가지고 학습을 수행하게 됩니다. 
 </p>

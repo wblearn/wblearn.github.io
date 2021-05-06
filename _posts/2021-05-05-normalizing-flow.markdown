@@ -7,46 +7,45 @@ tags:
     - Machine Learning
     - Normalizing Flow
     - ML
+use_math: true
+comments: true
 ---
 ## Normalizing Flow 개념 
 
 <p> 최근 Kubernetes 공부를 시작으로 서버 구성 작업을 하던 중 회사 프로젝트에서 머신러닝 모델의 퍼포먼스 증가를 위해서 normalizing flow를 접목시키게 되었습니다. 단순하게 normalizing flow 모델을 그대로 적용하는 것은 아니지만 이 과정을 위해서 공부하고 기본적인 구현까지 한 내용들을 정리하고자 블로그를 씁니다. 
 
-<p> Normalizing Flow의 컨셉은 단순하게 말하면 ""simple distribution"을 "complex distribution"으로 변환한다!" 입니다. 이때, 논문에서는 simple distribution에 연속적으로 invertible한 mapping을 사용해서 complex distribution으로 변환한다고 설명하고 있으며 여기서 중요한 점은 "invertible mapping"을 적용한다는 점입니다. 
+<img src="https://github.com/170928/170928.github.io/blob/master/_images/normalizing_flow/figure2.PNG?raw=true">
 
-<p> GAN 에서의 z 의 distribution(latent space의 distribution)을 invertible한 mapping들을 연속적으로 
+<p> Normalizing Flow의 컨셉은 단순하게 말하면 "_simple distribution_을 _complex distribution_으로 변환한다!" 입니다. 이때, 논문에서는 simple distribution에 연속적으로 _invertible한 mapping_을 사용해서 complex distribution으로 변환한다고 설명하고 있으며 여기서 중요한 점은 _invertible mapping_을 적용한다는 점입니다. 위의 그림은 Normalizing Flow를 가장 잘 설명하고 있는 그림입니다. 
 
-<p> Kubeflow는 MLOps 의 모든 lifecycle을 쉽고 간편하게 해준다고 공식 유튜브에서도 소개하고 있습니다. (https://www.youtube.com/watch?v=SRq21GRT31g)
+<img src="https://github.com/170928/170928.github.io/blob/master/_images/normalizing_flow/figure1.PNG?raw=true">
 
-<p> Kubeflow를 사용하는 것의 장점은 사진 한장으로 이해할 수 있습니다. 
+<p> Normalizing Flow에서 "z" 를 mapping하는 함수 f는 1-1 mapping function 이어야 하며 이 점이 매우 중요한 포인트입니다. 
 
-<img src="https://github.com/170928/170928.github.io/blob/master/_images/ml_operation_overview.png?raw=true">
+<p> 위의 사진은 논문에 있는 figure 입니다. Inference 시에는 Data space X의 격자무늬가 latent space Z로 매핑되면서 격자가 왜곡이 생기는데 이때 왜곡된 줄들이 엉켜있지 않습니다. 이는 topological property 측면에서 Data space X와 latent space Z가 homeomorphism(위상동형사상)이라는 것을 의미합니다. 반대로 Generation 시에는 latent space Z의 격자무늬가 Data space X로 매핑되면서 격자의 왜곡이 생기며 이때도 역시 격자가 서로 꼬이는 것이 없습니다. 즉, 이 mapping이 1-1 mapping이며 공간의 위상적 성질을 보존하는 위상동형사상 f  라는 것을 보여주는 그림이빈다. 
 
-<p> 위의 이미지는 machine learning을 사용하여 service를 하고자 할 때 실제로 필요로 되어지는 사항들을 표기한 것입니다. 생각보다 Machine learning code가 갖는 비중은 엄청 작고 다른 부가적인 요소들이 대부분의 비중을 차지하고 있는 것을 알 수 있습니다. 
+> 논문이나 다른 블로그들에서는 위의 그림에서 중요한 부분에 대해서는 설명이 되어있지 않았습니다. 격자무늬의 distortion에 대해서 아래 제가 reference로 단 Postech AMI lab의 유투브 영상에서 교수님(?)께서 이에 대한 설명을 해주시는게 들려서 이런 것들도 다 의미가 있었구나 하였던 그림입니다. 
 
-<p> 그리고, 이런 요소들은 Kubernetes와 Kubeflow가 없다면 각기 다른 환경에서 작동되는 상황을 가정하였을때 현실적으로 모두를 제대로 관리할 수 없게 됩니다...
+<p> 그래도 나름 이론적인 부분과 구현을 모두 다루고자 하기 떄문에 이런 포인트는 다 같이 생각해두고 넘어가면 좋을 것 같아서 남깁니다 ㅎㅎ
 
-<p> 실제로 ML을 처음 공부시작하면서 집중하게 되는 것은 모델을 구현하고 그에 따라서 논문에 나오는 여러가지 metric에 따라 모델의 성능을 향상시키는 것에 집중하게 됩니다. 
+<p> 다시 본 내용으로 돌아가면, Normalizing Flow의 연속적인 mapping을 통한 distribution의 변환이 가능한 이유는 **Change of Variables Theorem** 을 통해서 가능해집니다. 
 
-<p> 그러나, ML을 단순히 연구의 대상이 아니라 실제로 product를 만들고 이를 위해 ML을 사용하기 위해서는 ML pipeline이 훨씬 더 중요하게 됩니다.
+<img src="https://github.com/170928/170928.github.io/blob/master/_images/normalizing_flow/figure3.PNG?raw=true">
 
-<p> ML의 pipeline은 다음과 같이 크게 정의할 수 있습니다. 
+<p> 그리고 논문에서 처음 등장하는 수식이 위의 수식입니다. 위 수식이 표현하고자 하는 바는 이렇습니다. random variable "z" 가 distribution $$z\sim\pi(z)$$ 을 따른다고 할 때, 1-1 invertible mapping function "f" 를 통해서 새로운 random variable "x" ($$x=f(z)$$)를 구성할 수 있으며, 이때 "x"의 probability distribution $$p(x)$$를 구하는 방법은 수식과 같다는 것입니다. 
 
-+ load data : 사용하고자 하는 데이터를 db 와 같은 곳에서 가져옵니다. 
-+ data analysis & feature engineering : 데이터를 분석하고 ML 모델에 적용하기에 적합하도록 feature를 조절합니다. (개인적으로 이 단계가 제일 중요하다고 생각합니다)
-+ model implementation & validation : 위에서 전처리된 데이터를 다루기 위한 ML 모델을 구현하고 학습을 수행하며, 모델에 대한 검증을 진행합니다.
-+ model serving : 학습된 모델을 사용해서 service 를 제공할 수 있도록 구성합니다. 
+<p> 이 부분에 대해서 깊게 이해 할 필요는 없지만 자세히 조금 더 자세히 살펴보고자 합니다. 해당 내용은 논문의 refernece "Information-Maximization Approach to Blind Separation and Blind Deconvolution (Bell, A. J., & Sejnowski, T. J.) (1995)" 에서 자세히 다뤄지고 있습니다. 논문 자체의 주제는 Mutual Information 에 관한 내용이지만 우리에게 필요한 부분만 가져와서 이해해 보도록 하겠습니다. 
 
+<p> Mutual Information을 모르시면 우선 수식 $$I\(Y, X\) = H\(Y\) - H\(Y\barX\)$$ 라는게 있다고 생각하시면 될 것 같습니다. 그리고 논문에서는 이렇게 말합니다. When we pass a single input x through a transforming function g(x) to give an output variable y, both $$I\(y, x\)$$ and $$H\(y\)$$ are maximized when we align high density parts of the probability density function (pdf) of x with highly sloping parts of the function g(x).  
 
+<p> 즉, random variable x 가 1-1 mapping function "g"를 통해서 새로운 random variable "y"를 구성할때 ($$y=g(x)$$), 위의 MI 수식의 $$I\(y, x\)$$ 과 $$H\(y\)$$ 는 "x"의 확률 밀도 함수 (pdf)의 가장 높은 확률이 부여되는 곳 (고밀도 부분(?), high density parts) 을 1-1 mapping function "g"의 가장 큰 slope가 구성되는 곳과 매핑이 되는 경우 두 값이 최대가 된다라는 설명입니다. 자세한 설명은 논문에 나와있으니 살펴보시면 될 것 같습니다 ㅎㅎ 지금 이 글에서 중요한건 여기가 아니니까요.
 
-## Kubeflow 설치
+<img src="https://github.com/170928/170928.github.io/blob/master/_images/normalizing_flow/figure4.PNG?raw=true">
 
-<p> 간단한 개념에 대해서 살펴보았으니, 바로 Kubeflow를 어떻게 설치하는지 부터 살펴보겠습니다. 실제로 해보고 나서 개념을 다시 살펴보면 훨씬 잘 이해가 된다고 생각합니다.
+<p> 그래서, the pdf of the output, $$p(y)$$, can be written as a function of the pdf of the input $$p(x)$$. 라고하며 위의 수식을 설명합니다. 이 수식이 매우 익숙하실텐데 이게 normalizing flow 논문의 (1)번 수식입니다. 정확히는 위 reference 논문의 (2.12)를 보시면 더 같다는 것을 아실 수 있습니다. 
 
-<p> 
-
-
+<img src="https://github.com/170928/170928.github.io/blob/master/_images/normalizing_flow/figure5.PNG?raw=true">
 
 #### Reference 
 >1. https://www.youtube.com/watch?v=hwpNjszbHBM (Postech AMI lab 동영상입니다. 중간중간 들리는 교수님의 말씀에서도 큰 도움을 받았습니다. 이런 연구실에서 박사를 하면 엄청 즐겁게 배울게 많겠네요 ㅎㅎ )
->2. 
+>2. http://bigdata.dongguk.ac.kr/lectures/med_stat/_book/%ED%99%95%EB%A5%A0%EB%B3%80%EC%88%98%EB%B6%84%ED%8F%AC.html (오래전에 공부해서 잊었던 통계학적인 설명에 대해서는 이 reference에서 많이 공부했습니다.)

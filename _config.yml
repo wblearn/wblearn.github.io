@@ -19,7 +19,6 @@ incremental: false
 
 # SNS settings
 RSS: false
-weibo_username:  MyungJae Shin
 github_username:   mf-myungjae-shin
 
 
@@ -97,3 +96,5 @@ defaults:
       layout: video
 
 
+# 댓글 기능 
+disqus_shortname: '170928-github-io'

@@ -3,7 +3,7 @@ title: Wblearn Blog
 SEOTitle: Wblearn的博客 | Wblearn Blog
 header-img: img/home-bg-art.jpg
 email: 1275660493@qq.com
-description: "@wblearn,不要让任何事情成为你不去学习的理由！"
+description: "@wblearn,记录下自己学习的点滴！"
 keyword: "wblearn, @wblearn, wblearn的博客,wblearn Blog, 博客, 个人网站, 互联网"
 url: "http://wblearn.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -17,6 +17,7 @@ csdn_username:     wudalang_gd
 github_username:    wblearn
 #twitter_username:  wblearn
 jianshu_username:  48599dc7ef1b
+sv_username: study-video
 # linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -72,7 +73,7 @@ ga_domain: wblearn.github.io
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "不要让任何事情成为你不去学习的理由！"
+sidebar-about-description: "记录下自己学习的点滴！" 
 sidebar-avatar: /img/avatar-wb.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

@@ -123,5 +123,14 @@ friends: [
     },{
         title: "study video",
         href: "https://wblearn.github.io/study-video"
+    },{
+        title: "垠神的博客",
+        href: "http://www.yinwang.org/"
+    },{
+        title: "阮一峰的网络日志",
+        href: "https://www.ruanyifeng.com/blog/"
+    },{
+        title: "唐巧的博客",
+        href: "http://blog.devtang.com/"
     }
 ]

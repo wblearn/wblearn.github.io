@@ -17,11 +17,11 @@ tags:
 <p>这篇是继<a href="http://www.jianshu.com/p/185fd6942e7b" target="_blank">我的Web开发实战总结(一)</a>的第二篇文章，在此篇里，我主要总结一下如何把Web页面上的报表或列表数据转换成pdf文件下载到本地。其中涉及到的知识我也会提出来供大家交流学习。ok，开始吧~</p>
 <h1>先来看看效果</h1>
 <div class="image-package">
-<img src="http://wblearn.github.io/img/in-post/web/1.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-d4f04ff0f1b3e564.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption">Web页面上的列表数据</div>
+<img src="http://wblearn.github.io/img/in-post/web2/1.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-d4f04ff0f1b3e564.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption">Web页面上的列表数据</div>
 </div>
 <p>上图就是Web页面上的列表数据，将其右侧生成pdf之后的效果如下：</p>
 <div class="image-package">
-<img src="http://wblearn.github.io/img/in-post/web/2.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-566937ade0ec943e.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption">生成的pdf文件</div>
+<img src="http://wblearn.github.io/img/in-post/web2/2.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-566937ade0ec943e.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption">生成的pdf文件</div>
 </div>
 <h1>实现思路</h1>
 <p>这里我提出两种实现思路：</p>
@@ -44,7 +44,7 @@ tags:
 <p>这里我将它们打包免费分享出来，下载地址：<a href="http://download.csdn.net/detail/wudalang_gd/9764273" target="_blank">itext生成pdf所需的jar包</a></p>
 <p><strong>2.创建ftl模板文件</strong></p>
 <div class="image-package">
-<img src="http://wblearn.github.io/img/in-post/web/3.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-35a459345a7a545c.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
+<img src="http://wblearn.github.io/img/in-post/web2/3.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-35a459345a7a545c.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
 </div>
 <p><em>创建一个FreeMarker模板文件（</em>.ftl），在这个文件中加入FreeMarker表达式，这些表达式就好比jsp中的jstl标签一样，我们在程序中将数据传递给此文件中即可，在客户端显示时会被真实的数据替换。说白了，ftl模板文件就是在html里加入了FreeMarker表达式，所以里面的内容基本跟html一样，我们可以先创建html文件，修改完成后再将文件后缀改成.ftl即可。*本文.ftl模板如下：</p>
 <blockquote><p>arDraftBillPreview.ftl</p></blockquote>
@@ -160,7 +160,7 @@ tags:
 &lt;/html&gt;</code></pre>
 <p><em>以上代码在myeclipse中预览的效果如下：</em></p>
 <div class="image-package">
-<img src="http://wblearn.github.io/img/in-post/web/4.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-c6416e4d6ef17365.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
+<img src="http://wblearn.github.io/img/in-post/web2/4.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-c6416e4d6ef17365.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
 </div>
 <p><strong>注意：如果使用不存在的freemarker指令，FreeMarker不会使用模板输出，而是产生一个错误消息。其次，在写ftl模板的时候，因为xmlworker支持的CSS样式极少，所以模板内容要尽量简单。对于DOCTYPE和html标签的约束页比较严格。对于一个标签中含有中文、数字或英文的时候，很可能会出现问题。这是因为xmlworker在渲染PDF的时候是以html的标签为单位的。我发现有些字体下部分中文生成pdf不会显示。</strong>另外，对于freemarker模板语言不熟悉的童鞋，我会在文末贴出一些参考资料。</p>
 <p><strong>3.向ftl模板文件中填充数据，同时将其生成html</strong><br>在业务处理层，将数据传递个ftl ，同时解析ftl模板生成html</p>
@@ -329,7 +329,7 @@ tags:
             }
         };</code></pre>
 <p>在上面的程序中，包括PDF上的图片，表头及表身数据都传给ftl模板中了，在生成PDF之前，都会先生成一个.html的文件到tempFile的文件夹下，如下：<br></p><div class="image-package">
-<img src="http://wblearn.github.io/img/in-post/web/5.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-19f0aadaaaa89ebb.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
+<img src="http://wblearn.github.io/img/in-post/web2/5.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-19f0aadaaaa89ebb.png?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
 </div>
 <h1>写在最后</h1>
 <p>其实整个过程都比较简单，难就难在一开始你不知道用那种方式去实现，这种时候我建议你都试试，毕竟一个东西你试过之后才知道好不好，适不适合。还有一点就是，对于你不知道的东西，网上一般都有很多参考资料，一定要善于利用搜索引擎学习。关于学习，就三点：坚持，坚持，坚持。</p>

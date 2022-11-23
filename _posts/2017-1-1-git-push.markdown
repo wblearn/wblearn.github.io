@@ -1,17 +1,18 @@
 ---
+
 layout:     post
 title:      "push本地代码到github出错"
 date:       2017-1-1 00:00:00
 author:     "wblearn"
 header-img: "img/post-bg-alitrip.jpg"
 tags:
-    - git
-    - 
-    - 
+
+   - git
+     - - 
 
 ---
 
-![](http://img.blog.csdn.net/20170101121417088?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd3VkYWxhbmdfZ2Q=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![](http://wblearn.github.io/img/in-post/public/20170101121417088.png)
 
 **有时候往GitHub上提交东西的时候会因为remote repository上有东西更新了但是local repository 没有更新而造成提交失败**
 

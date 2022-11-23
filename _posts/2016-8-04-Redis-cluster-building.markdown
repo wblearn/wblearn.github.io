@@ -1,3 +1,5 @@
+---
+
 layout:     post
 title:      "redis3.0.x集群搭建 "
 date:       2016-8-04 00:00:00

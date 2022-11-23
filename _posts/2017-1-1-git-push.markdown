@@ -8,7 +8,7 @@ header-img: "img/post-bg-alitrip.jpg"
 tags:
 
    - git
-     - - 
+   
 
 ---
 
@@ -24,6 +24,7 @@ tags:
 ```
 $ git push -u origin master -f 
 ```
+
 
 这样会使远程修改丢失，一般是不可取的，尤其是多人协作开发的时候。
 

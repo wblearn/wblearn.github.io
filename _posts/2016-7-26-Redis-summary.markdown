@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "redis应用的总结 "
-date:       2016-8-08 17:14:34
+date:       2016-7-26 17:14:34
 author:     "wblearn"
 header-img: "img/contact-bg.jpg"
 tags:

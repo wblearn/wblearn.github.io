@@ -11,7 +11,7 @@ tags:
 ---
 <div data-note-content class="show-content">
           <div class="image-package">
-<img src="http://upload-images.jianshu.io/upload_images/2556999-1a2ad6a9a6690588.gif?imageMogr2/auto-orient/strip" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-1a2ad6a9a6690588.gif?imageMogr2/auto-orient/strip"><br><div class="image-caption"></div>
+<img src="http://wblearn.github.io/img/in-post/public/2556999-1a2ad6a9a6690588.gif" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-1a2ad6a9a6690588.gif?imageMogr2/auto-orient/strip"><br><div class="image-caption"></div>
 </div>
 <h1>写在前面</h1>
 <p>技术源于分享，所以今天抽空把自己之前用java做过的小游戏整理贴出来给大家参考学习。java确实不适合写桌面应用，这里只是<strong>通过这个游戏让大家理解oop面向对象编程的过程</strong>，纯属娱乐。代码写的很简单，也很容易理解，并且注释写的很清楚了，还有问题，自己私下去补课学习。</p>
@@ -693,7 +693,7 @@ public class ShootGame extends JPanel {
 <h1>写在最后</h1>
 <p>以上就是这个游戏我整理的完整代码，因为图片差不多9张，所以图片没上传，需要图片的友友请简信我，最后，我做了一张思维导图贴出来让大家更好的理解OOP面向对象编程的过程。</p>
 <div class="image-package">
-<img src="http://upload-images.jianshu.io/upload_images/2556999-8217513e89c06a4a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-8217513e89c06a4a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
+<img src="http://wblearn.github.io/img/in-post/public/2556999-8217513e89c06a4a.webp" data-original-src="http://upload-images.jianshu.io/upload_images/2556999-8217513e89c06a4a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2"><br><div class="image-caption"></div>
 </div>
 
 <p>下载地址：<a href="https://github.com/wblearn/Small-plane-game" target="_blank">Java打飞机小游戏（附完整源码）</a></p>

@@ -11,7 +11,9 @@ tags:
 ---
 
 ![](http://upload-images.jianshu.io/upload_images/2556999-d5f8ac8600b233a9.gif?imageMogr2/auto-orient/strip)
+
 # 写在前面
+
 今天周六，我又来分享知识啦。最近一直在忙项目，所以趁着这个周末，**喝着咖啡，听着音乐，敲着代码就把做项目的知识点总结给大家，简直不要太惬意**，哈哈。
 
 先从我做的功能界面开始说起：
@@ -23,6 +25,7 @@ tags:
 本篇主要介绍的就是图中红框标记的**搜索自动匹配功能**。仔细想一想，有木有很熟悉，对，这功能其实就是跟你每天百度、谷歌这样的搜索功能一样。所以下面我会分享一些知识点并写个例子来实现这样的功能。
 
 # 每天都用到的搜索自动匹配功能
+
 >百度的搜索框(默认显示四条数据)
 
 
@@ -40,9 +43,11 @@ tags:
 首先，大概过程肯定是这样的：**先从输入框中输入关键字，然后根据关键字在缓存或数据库取数据返回显示在下方区域。**
 
 # 重点知识汇总
+
 **要实现此功能，JQuery+ajax是必备**。这个功能需要服务端配合。客户端通过ajax从服务端取得的数据。下面，我写个**简书搜索自动匹配**的例子，数据是事先定义好在脚本里的，当然，如果我有访问简书数据库的权限和账号密码，就可以动态的获取实时数据了。
 
 开始之前，先给大家普及一下例子中用到的重点知识。
+
 >**知识点一**
 
 <code>
@@ -50,8 +55,10 @@ keydown(function(e){}
 </code>
 *这个keydown函数是当按下按键时触发事件，比如改变文本域的颜色。*
 比如这段代码：
-<code>
+
+```
 <html>
+
 <head>
 <script type="text/javascript" src="/jquery/jquery.js"></script>
 <script type="text/javascript">
@@ -65,13 +72,15 @@ $(document).ready(function(){
 });
 </script>
 </head>
+
 <body>
 Enter your name: <input type="text" />
+
 <p>当发生 keydown 和 keyup 事件时，输入域会改变颜色。请试着在其中输入内容。</p>
+
 </body>
 </html>
-
-</code>
+```
 
 ![](http://upload-images.jianshu.io/upload_images/2556999-dacb3a94db66e194.gif?imageMogr2/auto-orient/strip)
 
@@ -109,8 +118,10 @@ addClass()方法：向被选元素添加一个或多个类。*
 **首先在输入框上注册keyup事件，然后在事件中获取我实现定义的data对象数组(一般实时数据通过ajax获取json对象）。取得数据后，在下方区域就可以显示数据了，当我们点击每一项的时候，就可以响应事件。同时根据索引值来调整背景高亮。**
 
 html代码：
-<code>
+
+```
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
@@ -181,18 +192,22 @@ font{
   </style>
  </head>
  <body>
+
     <div id="container">
     <div id="content">
         <div class="first"><input id="kw" onKeyup="getContent(this);" /></div>
         <div id="append"></div>
     </div>
     </div>
+
  </body>
 </html>
 ```
 
 js代码：
+
 ```
+
 <script type="text/javascript">
 var data = [
 	"![](http://upload-images.jianshu.io/upload_images/2556999-22446bcad2b99d1b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)"+"  <font>简书IT·互联网专题</font>",
@@ -225,12 +240,13 @@ $(document).ready(function(){
             }else{
                 $(".item").removeClass('addbg').eq(0).addClass('addbg');
             }
-           
+
+
         }else if(keycode == 13){
             dojob();
         }
     });
-
+    
     var movePrev = function(){
         $("#kw").blur();
         var index = $(".addbg").prevAll().length;
@@ -240,7 +256,7 @@ $(document).ready(function(){
             $(".item").removeClass('addbg').eq(index-1).addClass('addbg');
         }
     }
-   
+       
     var moveNext = function(){
         var index = $(".addbg").prevAll().length;
         if(index == $(".item").length-1){
@@ -250,13 +266,14 @@ $(document).ready(function(){
         }
        
     }
-   
+       
     var dojob = function(){
         $("#kw").blur();
         var value = $(".addbg").text();
         $("#kw").val(value);
         $("#append").hide().html("");
     }
+
 });
 function getContent(obj){
     var kw = jQuery.trim($(obj).val());
@@ -286,6 +303,11 @@ function getCon(obj){
     $("#append").hide().html("");
 }
 </script>
-</code>
-#写在最后
+```
+
+
+
+# 写在最后
+
 以上就是我总结分享搜索自动匹配功能的全部内容，当然，界面我还可以做得更美观，功能可以做的更完善。今天先到这里，下次见(持续更新中......)
+

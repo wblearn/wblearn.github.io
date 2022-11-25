@@ -9,7 +9,7 @@ tags:
     - 博客
     - 
 ---
-
+<meta name="referrer" content="no-referrer"/>
 <div data-note-content class="show-content">
           <h1>写在前面</h1>
 <p>前天我的github博客搭建好啦，并在本地写了一篇文章<a href="https://wblearn.github.io/2016/12/23/one/" target="_blank">我的独立博客<small>(第一篇)</small></a>利用git将其push到github上，那么，今天就简单记录下git的使用。整个过程是在windows下操作的。</p>

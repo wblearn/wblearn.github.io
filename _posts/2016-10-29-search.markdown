@@ -112,7 +112,7 @@ addClass()方法：向被选元素添加一个或多个类。*
 **首先在输入框上注册keyup事件，然后在事件中获取我实现定义的data对象数组(一般实时数据通过ajax获取json对象）。取得数据后，在下方区域就可以显示数据了，当我们点击每一项的时候，就可以响应事件。同时根据索引值来调整背景高亮。**
 
 html代码：
-
+<pre><code>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -195,10 +195,10 @@ font{
 
  </body>
 </html>
-
+</pre></code>
 js代码：
 
-
+<pre><code>
 
 <script type="text/javascript">
 var data = [
@@ -296,7 +296,7 @@ function getCon(obj){
 }
 </script>
 
-
+</pre></code>
 
 写在最后
 

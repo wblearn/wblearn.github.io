@@ -53,7 +53,7 @@ session.getAttribute(&quot;isLogin&quot;);</pre>
 <p>什么是单点登录？单点登录全称Single Sign On（以下简称SSO），是指在多系统应用群中登录一个系统，便可在其他所有系统中得到授权而无需再次登录，包括单点登录与单点注销两部分</p>
 <h3>1、登录</h3>
 <p>相比于单系统登录，sso需要一个独立的认证中心，只有认证中心能接受用户的用户名密码等安全信息，其他系统不提供登录入口，只接受认证中心的间接授权。间接授权通过令牌实现，sso认证中心验证用户的用户名密码没问题，创建授权令牌，在接下来的跳转过程中，授权令牌作为参数发送给各个子系统，子系统拿到令牌，即得到了授权，可以借此创建局部会话，局部会话登录方式与单系统的登录方式相同。这个过程，也就是单点登录的原理，用下图说明</p>
-<p><img src="http://wblearn.github.io/img/in-post/sso/8.png" alt="" /></p>
+<p><img src="https://images2015.cnblogs.com/blog/797930/201612/797930-20161203152650974-276822362.png" alt="" /></p>
 <p>下面对上图简要描述</p>
 <ol>
 <li>用户访问系统1的受保护资源，系统1发现用户未登录，跳转至sso认证中心，并将自己的地址作为参数</li>
@@ -80,7 +80,7 @@ session.getAttribute(&quot;isLogin&quot;);</pre>
 <p>你可以通过博客园、百度、csdn、淘宝等网站的登录过程加深对单点登录的理解，注意观察登录过程中的跳转url与参数</p>
 <h3>2、注销</h3>
 <p>单点登录自然也要单点注销，在一个子系统中注销，所有子系统的会话都将被销毁，用下面的图来说明</p>
-<p><a  href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155242271-222889796.png" rel="lightbox[22863] nofollow" title="3b139d2e-0b83-4a69-b4f2-316adb8997ce" class="external" target="_blank"><img title="3b139d2e-0b83-4a69-b4f2-316adb8997ce" src="http://wblearn.github.io/img/in-post/sso/9.png" alt="3b139d2e-0b83-4a69-b4f2-316adb8997ce" width="698" height="499" border="0" /></a></p>
+<p><a  href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155242271-222889796.png" rel="lightbox[22863] nofollow" title="3b139d2e-0b83-4a69-b4f2-316adb8997ce" class="external" target="_blank"><img title="3b139d2e-0b83-4a69-b4f2-316adb8997ce" src="https://images2015.cnblogs.com/blog/797930/201611/797930-20161129155242271-222889796.png" alt="3b139d2e-0b83-4a69-b4f2-316adb8997ce" width="698" height="499" border="0" /></a></p>
 <p>sso认证中心一直监听全局会话的状态，一旦全局会话销毁，监听器将通知所有注册系统执行注销操作</p>
 <p>下面对上图简要说明</p>
 <ol>
